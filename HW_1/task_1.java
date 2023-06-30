@@ -2,8 +2,6 @@ package HW_1;
 import java.util.Scanner;
 public class task_1 {
     public static void main(String[] args){
-
-
         Scanner iScanner = new Scanner(System.in);
         System.out.println("Введите натуральное число: ");
         int n = iScanner.nextInt();
@@ -19,5 +17,6 @@ public class task_1 {
         // как-то не по-русски и не по-математически звучит
         int summ = (n * (n + 1)) / 2;
         System.out.printf("Сумма чисел: %d\n", summ);
+        iScanner.close();
     }
 }

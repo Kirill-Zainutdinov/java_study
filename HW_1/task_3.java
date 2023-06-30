@@ -6,7 +6,6 @@ public class task_3 {
     public static void main(String[] args){
         Scanner iScanner = new Scanner(System.in);
 
-        
         while (true){
             System.out.println("Что будем делать?: ");
             System.out.println("1. Складывать");
@@ -39,5 +38,7 @@ public class task_3 {
                 System.out.printf("Ответ: %f\n", a / b);
             }
         }
+
+        iScanner.close();
     }
 }
