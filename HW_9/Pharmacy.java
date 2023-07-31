@@ -81,7 +81,6 @@ public class Pharmacy implements Iterable<Component>, Comparable<Pharmacy>, Comp
         // если количество компонентов разное
         if(this.components.size() != other.components.size()) return false;
         // сравниваем названия компонентов
-        //return compareComponentNames(other);
         int globalMatch = 0;
         for (int i = 0; i < this.components.size(); i++) {
             int match = 0;
@@ -116,6 +115,4 @@ public class Pharmacy implements Iterable<Component>, Comparable<Pharmacy>, Comp
 
         return result;
     }
-
-
 }
