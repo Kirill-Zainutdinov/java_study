@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         ILogger logger = new FileLogger("db.txt");
-        IMathOperations calculator = new SimpleCalculator();
+        IMathOperations<Double> calculator = new SimpleCalculator();
         CalculatorView view = new CalculatorView(calculator, logger);
 
         view.run();

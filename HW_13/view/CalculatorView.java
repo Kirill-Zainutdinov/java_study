@@ -6,10 +6,10 @@ import HW_13.logger.ILogger;
 
 public class CalculatorView {
     
-    private IMathOperations calculator;
+    private IMathOperations<Double> calculator;
     private ILogger logger;
 
-    public CalculatorView(IMathOperations _calculator, ILogger _logger){
+    public CalculatorView(IMathOperations<Double> _calculator, ILogger _logger){
         calculator = _calculator;
         logger = _logger;
     }
