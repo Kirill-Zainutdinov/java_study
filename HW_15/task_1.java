@@ -89,7 +89,20 @@ public class task_1 {
         if (check == 6){
             return new String(surname + " " + name + " " + lastname + " " + date + " " + phone + " " + male);
         } else {
-            throw new RuntimeException("Вы ввели данные в неправильном формате, мы же предупреждали");
+            String ErrorMessage = "";
+            if (surname.length() == 0 || name.length() == 0 || lastname.length() == 0){
+                ErrorMessage += " ФИО";
+            }
+            if (date.length() == 0){
+                ErrorMessage += " дата рождения";
+            }
+            if (phone.length() == 0){
+                ErrorMessage += " телефон";
+            }
+            if (male.length() == 0){
+                ErrorMessage += " пол";
+            }
+            throw new RuntimeException("Вы ввели следующие данные в неправильном формате:" + ErrorMessage + ". Мы же предупреждали... ");
         }
     }
 
@@ -140,10 +153,15 @@ public class task_1 {
     }
 
     public static boolean checkPhone(String str) {
-        try {
-            Integer.parseInt(str);
-            return true;
-        } catch (Exception e) {
+        if('0' <= str.charAt(0) && str.charAt(0) <= '9')
+        {
+            try {
+                Integer.parseInt(str);
+                return true;
+            } catch (Exception e) {
+                return false;
+            }
+        } else {
             return false;
         }
     }
