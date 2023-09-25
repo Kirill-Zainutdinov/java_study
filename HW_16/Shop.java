@@ -1,6 +1,5 @@
 package HW_16;
 
-import HW_16.Toy;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.PriorityQueue;
@@ -38,11 +37,10 @@ public class Shop {
     public static String[] readParametrs(){
         Scanner iScanner = new Scanner(System.in);
         String str = iScanner.nextLine();
-        iScanner.close();
         return str.split(" ");
     }
 
-    public int get(int[] chances){
+    public static int get(int[] chances){
         Random random = new Random();
         int id = 0;
         int point0 = 1;
@@ -50,7 +48,7 @@ public class Shop {
         int point2 = chances[0] + chances[1];
         int point3 = 100;
 
-        int rand = random.nextInt(1, 101);
+        int rand = random.nextInt(100) + 1;
         if (point0 <= rand && rand <= point1) {
             id = 1;
         }
